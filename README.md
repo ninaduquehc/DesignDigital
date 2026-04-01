@@ -1,1 +1,1 @@
-olá mundo
+Atividade para criar um site responsivo que use bootstrap sobre uma universidade fictícia
