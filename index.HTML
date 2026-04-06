@@ -5,59 +5,121 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Studio Keyframe</title>
-    <link rel="stylesheet" href="/CSS/style.css">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Seu CSS -->
+    <link rel="stylesheet" href="./CSS/style.css">
 </head>
-<!--comentario-->
+
 <body>
-    <header>
-        <div class="logo">
-            <img src="/imagens/logo keyframe transparente.png" alt="Logo">
+
+    <header class="d-flex align-items-center justify-content-between p-4 bg-black">
+
+        <!-- Logo -->
+        <div>
+            <img src="./imagens/logo keyframe transparente.png" alt="Logo" class="img-fluid" style="width: 200px;">
         </div>
 
-        <div class="titulo">
-            <h1>Studio Keyframe</h1>
-            <p>Universidade de Design de Animação</p>
+        <!-- Título -->
+        <div class="text-center flex-grow-1">
+            <h1 class="fw-bold titulo-principal">Studio Keyframe</h1>
+            <p class="subtitulo">Universidade de Design de Animação</p>
         </div>
 
+        <!-- Menu -->
         <nav>
-            <ul>
-                <li><a href="./index.HTML">Home</a></li>
-                <li><a href="./contato.HTML">Contato</a></li>
-                <li><a href="./sobre.HTML">Sobre</a></li>
+            <ul class="list-unstyled d-flex flex-column align-items-end gap-1 m-0">
+                <li><a href="./index.html" class="text-decoration-none link-custom">Home</a></li>
+                <li><a href="./sobre.html" class="text-decoration-none link-custom">Sobre</a></li>
+                <li><a href="./contato.html" class="text-decoration-none link-custom">Contato</a></li>
             </ul>
         </nav>
+
     </header>
 
-    <main>
-        <section>
-            <h2>Visão da Universidade</h2>
-            <p> <strong>Esta Universidade</strong> Lorem ipsum dolor <abbr 
-                title="Computer Graphic Imagery">CGI</abbr> sit amet <em>animação</em> 
-                consectetur adipisicing elit. <br><b>Design</b> Quaerat praesentium atque 
-                voluptas suscipit eos, <i>modelagem</i> tempore, illo autem ullam beatae 
-                error voluptate vero et. Illo doloremque quidem, facere beatae qui hic?
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro voluptatibus 
-                facere est ipsa exercitationem unde. Aperiam rerum nemo, quam quis, facere laborum 
-                exercitationem totam numquam illum beatae qui ipsam rem!</p>
-            <h3>Cursos Oferecidos</h3>
-            <ul>
+    <!-- Carousel -->
+    <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="3"></button>
+        </div>
+
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="./imagens/keyframe_1.png" class="d-block w-100" alt="Porta Principal">
+            </div>
+
+            <div class="carousel-item">
+                <img src="./imagens/keyframe_2.png" class="d-block w-100" alt="Fachada">
+            </div>
+
+            <div class="carousel-item">
+                <img src="./imagens/keyframe_3.png" class="d-block w-100" alt="Área Comum">
+            </div>
+
+            <div class="carousel-item">
+                <img src="./imagens/keyframe_4.png" class="d-block w-100" alt="Sala de Aula">
+            </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+
+        <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+
+    </div>
+
+    <!-- MAIN -->
+    <main class="container py-4 d-flex flex-column gap-4">
+
+        <section class="d-flex flex-column gap-2">
+            <h2 class="titulo-principal">Visão da Universidade</h2>
+
+            <p>
+                <strong>Esta Universidade</strong> Lorem ipsum dolor
+                <abbr title="Computer Graphic Imagery">CGI</abbr> sit amet
+                <em>animação</em>.
+            </p>
+
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
+
+            <h3 class="subtitulo">Cursos Oferecidos</h3>
+
+            <ul class="ps-3">
                 <li>Animação 2D</li>
-                 <li>Animação 3D</li>
-                 <li>Design de personagens</li>
-                 <li>Efeitos visuais</li>
-             </ul>
-             <h3>Destaques</h3>
-            <p> <strong>Trabalhos dos alunos</strong> orem ipsum dolor sit amet consectetur adipisicing elit. 
-                Magnam consequuntur totam officia repudiandae debitis inventore dolore, 
-                veritatis, nemo reprehenderit omnis dolorum beatae porro ipsum fugiat. Ab, eaque similique? Ex, deserunt!</p>
-            <p><strong>Premiações</strong>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione, mollitia omnis placeat nobis porro sint </p>
-            <p><strong>Parcerias</strong>iste rem tempora illo temporibus saepe harum sunt laborum dicta odit ipsam, corporis numquam! Non.</p>
+                <li>Animação 3D</li>
+                <li>Design de personagens</li>
+                <li>Efeitos visuais</li>
+            </ul>
+
+            <h3 class="subtitulo">Destaques</h3>
+
+            <p><strong>Trabalhos dos alunos</strong> Lorem ipsum.</p>
+            <p><strong>Premiações</strong> Lorem ipsum.</p>
+            <p><strong>Parcerias</strong> Lorem ipsum.</p>
+
+            <!-- Botão exemplo -->
+            <button class="btn botao-custom mt-2">Saiba mais</button>
         </section>
+
     </main>
 
-    <footer>
+    <footer class="bg-black text-center p-4">
         <p>&copy; Studio Keyframe. Todos os direitos reservados</p>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
+
 </html>
