@@ -4,22 +4,47 @@
     --fundo: rgb(39, 6, 62);
 }
 
-/* Fundo */
+/* =========================
+   BASE
+========================= */
 body {
     background-color: var(--fundo);
     color: white;
+    font-family: 'Poppins', sans-serif;
 }
 
-/* Títulos */
+/* =========================
+   HEADER
+========================= */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.logo-img {
+    width: 120px;
+    height: auto;
+}
+
+/* =========================
+   TIPOGRAFIA
+========================= */
 .titulo-principal {
     color: chocolate;
+    margin: 0;
 }
 
 .subtitulo {
     color: var(--lilas);
+    margin: 0;
+    font-size: 0.9rem;
 }
 
-/* Links */
+/* =========================
+   LINKS
+========================= */
 .link-custom {
     color: var(--lilas);
 }
@@ -28,7 +53,9 @@ body {
     color: chocolate;
 }
 
-/* Botão */
+/* =========================
+   BOTÕES
+========================= */
 .botao-custom {
     background-color: var(--roxo);
     border: 2px solid var(--lilas);
@@ -38,4 +65,14 @@ body {
 .botao-custom:hover {
     background-color: chocolate;
     border-color: chocolate;
+}
+
+/* =========================
+   CAROUSEL
+========================= */
+.carousel-item img {
+    height: 60vh;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
 }
