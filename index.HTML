@@ -18,28 +18,53 @@
 
 <body>
 
-    <header class="d-flex align-items-center p-4 bg-black">
+<header>
+  <nav class="navbar navbar-expand-md navbar-dark bg-black py-3">
 
-        <!-- Logo -->
-        <div class="w-25">
-            <img src="./imagens/logo keyframe transparente.png" alt="Logo" class="img-fluid" style="width: 200px;">
+    <div class="container-fluid">
+
+      <!-- Logo + Nome -->
+      <a class="navbar-brand d-flex align-items-center gap-3" href="#">
+        <img src="./imagens/logo keyframe transparente.png" style="width: 70px;">
+        <div>
+          <div class="fw-light text-white" style="font-size: 14px;">Universidade</div>
+          <div class="fw-bold text-white" style="font-size: 20px;">Studio Keyframe</div>
         </div>
+      </a>
 
-        <!-- Título -->
-        <div class="text-center w-50">
-            <h1 class="fw-bold titulo-principal">Studio Keyframe</h1>
-            <p class="subtitulo">Universidade de Design de Animação</p>
-        </div>
+      <!-- Botão hambúrguer -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-        <!-- Menu -->
-        <nav class="w-25">
-            <ul class="list-unstyled d-flex flex-column align-items-end gap-1 m-0">
-                <li><a href="./index.html" class="text-decoration-none link-custom">Home</a></li>
-                <li><a href="./sobre.html" class="text-decoration-none link-custom">Sobre</a></li>
-                <li><a href="./contato.html" class="text-decoration-none link-custom">Contato</a></li>
-            </ul>
-        </nav>
+      <!-- Menu -->
+      <div class="collapse navbar-collapse" id="menu">
 
+        <ul class="navbar-nav ms-auto gap-4 align-items-center">
+
+          <li class="nav-item">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#">Sobre</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#">Cursos</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contato</a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+  </nav>
 </header>
 
     <div class="container my-4">

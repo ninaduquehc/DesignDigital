@@ -17,15 +17,21 @@ body {
    HEADER
 ========================= */
 header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
+    width: 100%;
 }
 
 .logo-img {
     width: 120px;
     height: auto;
+}
+
+.nav-link {
+  color: white;
+  transition: 0.3s;
+}
+
+.nav-link:hover {
+  color: #0dcaf0;
 }
 
 /* =========================
