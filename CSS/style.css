@@ -21,17 +21,17 @@ header {
 }
 
 .logo-img {
-    width: 120px;
+    width: 7.5rem; /* antes: 120px */
     height: auto;
 }
 
 .nav-link {
-  color: white;
-  transition: 0.3s;
+    color: white;
+    transition: 0.3s;
 }
 
 .nav-link:hover {
-  color: #0dcaf0;
+    color: #0dcaf0;
 }
 
 /* =========================
@@ -64,7 +64,7 @@ header {
 ========================= */
 .botao-custom {
     background-color: var(--roxo);
-    border: 2px solid var(--lilas);
+    border: 0.125rem solid var(--lilas); /* antes: 2px */
     color: white;
 }
 
@@ -81,4 +81,53 @@ header {
     width: 100%;
     object-fit: cover;
     border-radius: 1rem;
+}
+
+/* =========================
+   CARDS DE CURSO
+========================= */
+.curso-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.75rem;
+    cursor: pointer;
+
+    /* altura responsiva */
+    aspect-ratio: 3 / 4;
+}
+
+.curso-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* =========================
+   OVERLAY
+========================= */
+.overlay {
+    position: absolute;
+    inset: 0; /* substitui top/left/width/height */
+
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    padding: 1.25rem; /* antes: 20px */
+
+    opacity: 0;
+    transition: 0.4s;
+}
+
+/* =========================
+   HOVER
+========================= */
+.curso-card:hover .overlay {
+    opacity: 1;
 }
