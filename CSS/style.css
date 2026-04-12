@@ -14,6 +14,26 @@ body {
 }
 
 /* =========================
+   TIPOGRAFIA
+========================= */
+
+/* TODOS OS TÍTULOS */
+h1, h2, h3, h4, h5, h6 {
+    color: chocolate;
+}
+
+/* TÍTULOS ESPECÍFICOS */
+.titulo-principal {
+    margin: 0;
+}
+
+.subtitulo {
+    color: var(--lilas);
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* =========================
    HEADER
 ========================= */
 header {
@@ -21,7 +41,7 @@ header {
 }
 
 .logo-img {
-    width: 7.5rem; /* antes: 120px */
+    width: 7.5rem;
     height: auto;
 }
 
@@ -32,20 +52,6 @@ header {
 
 .nav-link:hover {
     color: #0dcaf0;
-}
-
-/* =========================
-   TIPOGRAFIA
-========================= */
-.titulo-principal {
-    color: chocolate;
-    margin: 0;
-}
-
-.subtitulo {
-    color: var(--lilas);
-    margin: 0;
-    font-size: 0.9rem;
 }
 
 /* =========================
@@ -64,7 +70,7 @@ header {
 ========================= */
 .botao-custom {
     background-color: var(--roxo);
-    border: 0.125rem solid var(--lilas); /* antes: 2px */
+    border: 0.125rem solid var(--lilas);
     color: white;
 }
 
@@ -91,8 +97,6 @@ header {
     overflow: hidden;
     border-radius: 0.75rem;
     cursor: pointer;
-
-    /* altura responsiva */
     aspect-ratio: 3 / 4;
 }
 
@@ -108,7 +112,7 @@ header {
 ========================= */
 .overlay {
     position: absolute;
-    inset: 0; /* substitui top/left/width/height */
+    inset: 0;
 
     background: rgba(0, 0, 0, 0.7);
     color: white;
@@ -119,7 +123,7 @@ header {
     align-items: center;
 
     text-align: center;
-    padding: 1.25rem; /* antes: 20px */
+    padding: 1.25rem;
 
     opacity: 0;
     transition: 0.4s;
@@ -130,4 +134,23 @@ header {
 ========================= */
 .curso-card:hover .overlay {
     opacity: 1;
+}
+
+/* =========================
+   ANCORAGEM (DESTAQUE)
+========================= */
+h5:target {
+    background-color: #6f42c1;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 10px;
+}
+
+/* =========================
+   RESET LINK
+========================= */
+.reset-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
 }

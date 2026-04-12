@@ -8,7 +8,7 @@
 
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    
+
     <!-- Fonte Poppins -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 
@@ -18,65 +18,43 @@
 
 <body>
 
-<header>
-  <nav class="navbar navbar-expand-md navbar-dark bg-black py-3">
+    <!-- RESET DO TARGET -->
+    <a href="#topo" class="overlay-reset"></a>
+    <div id="topo"></div>
 
-    <div class="container-fluid">
+    <!-- HEADER -->
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark bg-black py-3">
+            <div class="container-fluid">
 
-      <!-- Logo + Nome -->
-      <a class="navbar-brand d-flex align-items-center gap-3" href="#">
-        <img src="./imagens/logo keyframe transparente.png" style="width: 70px;">
-        <div>
-          <div class="fw-light text-white" style="font-size: 14px;">Universidade</div>
-          <div class="fw-bold text-white" style="font-size: 20px;">Studio Keyframe</div>
-        </div>
-      </a>
+                <a class="navbar-brand d-flex align-items-center gap-3" href="#">
+                    <img src="./imagens/logo keyframe transparente.png" style="width: 70px;">
+                    <div>
+                        <span class="fw-light text-white" style="font-size: 14px;">Universidade</span><br>
+                        <strong class="text-white" style="font-size: 20px;">Studio Keyframe</strong>
+                    </div>
+                </a>
 
-      <!-- Botão hambúrguer -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-      <!-- Menu -->
-      <div class="collapse navbar-collapse" id="menu">
+                <div class="collapse navbar-collapse" id="menu">
+                    <ul class="navbar-nav ms-auto gap-4 align-items-center">
+                        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Sobre</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Cursos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Contato</a></li>
+                    </ul>
+                </div>
 
-        <ul class="navbar-nav ms-auto gap-4 align-items-center">
-
-          <li class="nav-item">
-            <a class="nav-link" href="#">Home</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="#">Sobre</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="#">Cursos</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contato</a>
-          </li>
-
-        </ul>
-
-      </div>
-
-    </div>
-
-  </nav>
-</header>
-
-    <div class="container my-4">
-        <!-- Carousel -->
-        <div id="demo" class="carousel slide" data-bs-ride="carousel">
-
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
-                <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
-                <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
-                <button type="button" data-bs-target="#demo" data-bs-slide-to="3"></button>
             </div>
+        </nav>
+    </header>
+
+    <!-- CAROUSEL -->
+    <section class="container my-4">
+        <div id="demo" class="carousel slide" data-bs-ride="carousel">
 
             <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -96,6 +74,7 @@
                 </div>
             </div>
 
+            <!-- BOTÕES -->
             <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon"></span>
             </button>
@@ -105,88 +84,135 @@
             </button>
 
         </div>
-    </div>    
+    </section>
 
     <!-- MAIN -->
     <main class="container py-4 d-flex flex-column gap-4">
 
-        <section class="d-flex flex-column gap-2">
-            <h2 class="titulo-principal">Visão da Universidade</h2>
+        <!-- VISÃO GERAL -->
+        <section>
+            <h2 class="titulo-principal">Visão geral Universidade</h2>
 
-            <p>
-                <strong>Esta Universidade</strong> Lorem ipsum dolor
-                <abbr title="Computer Graphic Imagery">CGI</abbr> sit amet
-                <em>animação</em>.
-            </p>
+            <p><strong>Esta Universidade</strong> Lorem ipsum dolor sit amet consectetur 
+            adipisicing elit. Dolores voluptatem ullam quidem id odio qui. Assumenda 
+            suscipit magni repellendus, est itaque voluptas officiis laborum non reiciendis 
+            id delectus accusantium porro!.</p>
 
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            </p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Aspernatur tempore dolorum consequuntur expedita, doloribus 
+            animi beatae perspiciatis sequi ad laborum dolor earum praesentium 
+            esse assumenda possimus placeat sed quaerat sunt.</p>
+        </section>
 
-            <h3 class="subtitulo">Cursos Oferecidos</h3>
+        <!-- CURSOS -->
+        <section>
+            <h3>Cursos Oferecidos</h3>
 
-<div class="row g-4">
+            <div class="row g-4">
 
-    <!-- CARD 1 -->
-    <div class="col-md-3">
-        <div class="curso-card">
-            <img src="./imagens/1.png" alt="Animação 2D">
-            <div class="overlay">
-                <h5>Animação 2D</h5>
-                <p>Aprenda técnicas profissionais de animação.</p>
+                <div class="col-md-3">
+                    <a href="#animacao2d" class="text-decoration-none">
+                        <article class="curso-card">
+                            <img src="./imagens/1.png" alt="Animação 2D">
+                            <div class="overlay">
+                                <h5>Animação 2D</h5>
+                            </div>
+                        </article>
+                    </a>
+                </div>
+
+                <div class="col-md-3">
+                    <a href="#animacao3d" class="text-decoration-none">
+                        <article class="curso-card">
+                            <img src="./imagens/2.png" alt="Animação 3D">
+                            <div class="overlay">
+                                <h5>Animação 3D</h5>
+                            </div>
+                        </article>
+                    </a>
+                </div>
+
+                <div class="col-md-3">
+                    <a href="#designdepersonagens" class="text-decoration-none">
+                        <article class="curso-card">
+                            <img src="./imagens/3.png" alt="Design">
+                            <div class="overlay">
+                                <h5>Design de Personagens</h5>
+                            </div>
+                        </article>
+                    </a>
+                </div>
+
+                <div class="col-md-3">
+                    <a href="#efeitosvisuais" class="text-decoration-none">
+                        <article class="curso-card">
+                            <img src="./imagens/4.png" alt="VFX">
+                            <div class="overlay">
+                                <h5>Efeitos Visuais</h5>
+                            </div>
+                        </article>
+                    </a>
+                </div>
+
             </div>
-        </div>
-    </div>
+        </section>
 
-    <!-- CARD 2 -->
-    <div class="col-md-3">
-        <div class="curso-card">
-            <img src="./imagens/2.png" alt="Animação 3D">
-            <div class="overlay">
-                <h5>Animação 3D</h5>
-                <p>Modelagem, rigging e animação completa.</p>
-            </div>
-        </div>
-    </div>
+        <!-- PROPÓSITO -->
+        <section>
+            <h2 class="titulo-principal">Propósito da Universidade</h2>
 
-    <!-- CARD 3 -->
-    <div class="col-md-3">
-        <div class="curso-card">
-            <img src="./imagens/3.png" alt="Design">
-            <div class="overlay">
-                <h5>Design de Personagens</h5>
-                <p>Crie personagens únicos e expressivos.</p>
-            </div>
-        </div>
-    </div>
+            <p><strong>Esta Universidade</strong> Lorem ipsum dolor sit amet consectetur 
+            adipisicing elit. Dolores voluptatem ullam quidem id odio qui. Assumenda 
+            suscipit magni repellendus, est itaque voluptas officiis laborum non reiciendis 
+            id delectus accusantium porro!.</p>
 
-    <!-- CARD 4 -->
-    <div class="col-md-3">
-        <div class="curso-card">
-            <img src="./imagens/4.png" alt="VFX">
-            <div class="overlay">
-                <h5>Efeitos Visuais</h5>
-                <p>Domine efeitos para cinema e games.</p>
-            </div>
-        </div>
-    </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Aspernatur tempore dolorum consequuntur expedita, doloribus 
+            animi beatae perspiciatis sequi ad laborum dolor earum praesentium 
+            esse assumenda possimus placeat sed quaerat sunt.</p>
+        </section>
 
-</div>
+        <!-- DETALHES DOS CURSOS -->
+        <section>
 
-            <h3 class="subtitulo">Destaques</h3>
+            <article>
+                <h5 id="animacao2d">Animação 2D</h5>
+                <p>A Animação 2D Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt 
+                dignissimos amet nostrum eaque, omnis voluptate nisi error, assumenda asperiores 
+                mollitia blanditiis minus voluptatem animi, impedit expedita cumque doloremque. Ex,
+                accusamus!</p>
+            </article>
 
-            <p><strong>Trabalhos dos alunos</strong> Lorem ipsum.</p>
-            <p><strong>Premiações</strong> Lorem ipsum.</p>
-            <p><strong>Parcerias</strong> Lorem ipsum.</p>
+            <article>
+                <h5 id="animacao3d">Animação 3D</h5>
+                <p>A Animação 3D Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Maiores officia illum, odio iusto beatae voluptas repudiandae laudantium 
+                culpa porro neque quos sunt praesentium consequuntur molestias non aperiam 
+                enim assumenda eligendi.</p>
+            </article>
 
-            <!-- Botão exemplo -->
-            <button class="btn botao-custom mt-2">Saiba mais</button>
+            <article>
+                <h5 id="designdepersonagens">Design de Personagens</h5>
+                <p>O Design de Personagens Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                Inventore libero incidunt recusandae mollitia ipsum rem sint ad aliquid placeat nulla
+                totam soluta quaerat, aspernatur corporis quibusdam optio sit tempore minima?</p>
+            </article>
+
+            <article>
+                <h5 id="efeitosvisuais">Efeitos Visuais</h5>
+                <p>O VFX Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit, 
+                officia. Provident, dicta maxime voluptatibus deleniti labore omnis 
+                voluptatem. Sint ducimus commodi numquam autem eligendi repudiandae 
+                officiis et nemo ullam quo?</p>
+            </article>
+
         </section>
 
     </main>
 
+    <!-- FOOTER -->
     <footer class="bg-black text-center p-4">
-        <p>&copy; Studio Keyframe. Todos os direitos reservados</p>
+        <p>&copy; Studio Keyframe</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
