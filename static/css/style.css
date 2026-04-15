@@ -8,7 +8,7 @@
    BASE
 ========================= */
 body {
-    background-color: var(--fundo);
+    background-color:rgb(87, 61, 113);
     color: white;
     font-family: 'Poppins', sans-serif;
 }
@@ -19,7 +19,7 @@ body {
 
 /* TODOS OS TÍTULOS */
 h1, h2, h3, h4, h5, h6 {
-    color: chocolate;
+    color: rgb(255, 158, 32);
 }
 
 /* TÍTULOS ESPECÍFICOS */
@@ -209,3 +209,18 @@ details summary {
 .card-body {
     padding: 0;
 }
+
+/* Estilo padrão (para telas maiores) */
+ .truncate {
+ width: 250px;
+ white-space: nowrap;
+ overflow: hidden;
+ text-overflow: ellipsis;
+ }
+
+/* Quando a tela for 480px ou menor */
+ @media (max-width: 480px) {
+ .truncate {
+ width: 150px; /* Reduzimos a largura para caber no cellular */
+ }
+ }
