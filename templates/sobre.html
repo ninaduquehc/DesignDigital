@@ -4,60 +4,67 @@
 
 {% block content %}
 
-    <main class="p-4 d-flex flex-column gap-3">
+<main class="p-4 d-flex flex-column gap-3">
 
-        <section class="d-flex flex-column gap-3">
-            <h2>Quem Somos</h2>
-            <!-- HISTÓRIA -->
-            <details class="historia" open>
-                <summary>História da Universidade</summary>
-                <p>
-                    <strong>Esta Universidade</strong> Lorem ipsum dolor
-                    <abbr title="Computer Graphic Imagery">CGI</abbr> sit amet
-                    <em>animação</em> consectetur adipisicing elit. <br>
-                    <b>Criada por</b> Quaerat praesentium atque voluptas suscipit eos,
-                    <i>modelagem</i> tempore... Lorem ipsum dolor sit amet consectetur
-                    adipisicing elit. Architecto, modi! Placeat fugiat aliquam fuga nisi
-                    eius est alias fugit consectetur, ab dicta, aliquid aut ipsam repellendus,
-                    molestiae blanditiis reprehenderit. Excepturi?
-                </p>
-            </details>
+    <section class="d-flex flex-column gap-3">
+        <h2>Quem Somos</h2>
+        <section class="row align-items-center">
+            <div class="col-md-6">
+                <details class="historia" open>
+                    <summary>História da Universidade</summary>
+                    <p>
+                        <strong>Esta Universidade</strong> Lorem ipsum dolor
+                        <abbr title="Computer Graphic Imagery">CGI</abbr> sit amet
+                        <em>animação</em> consectetur adipisicing. <br>
+                        <b>Criada por</b> Quaerat praesentium atque voluptas suscipit eos,
+                        <i>modelagem</i> tempore... Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Architecto, modi! Placeat fugiat aliquam fuga nisi
+                        eius est alias fugit consectetur, ab dicta, aliquid aut ipsam repellendus,
+                        molestiae blanditiis reprehenderit. Excepturi?
+                    </p>
+                </details>
 
-            <!-- MISSÃO -->
-            <details class="missao">
-                <summary>Missão e Objetivos</summary>
-                <p>
-                    <strong>Nossa Missão é Lorem ipsum dolor, sit
-                        amet consectetur adipisicing elit. Laudantium
-                        animi dolores consectetur ratione, earum adipisci
-                        enim eveniet exercitationem nesciunt facilis corrupti
-                        qui possimus non repudiandae quo nisi necessitatibus facere aliquam?</strong>
-                </p>
-            </details>
 
-            <h3>Equipe</h3>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam sunt
-                eligendi perferendis! Vel ullam ipsum asperiores cupiditate dicta nulla
-                voluptatem qui explicabo.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio accusamus
-                veniam repudiandae minima ullam facilis nobis recusandae impedit cum optio
-                rerum, non voluptatem assumenda similique atque, laboriosam
-                voluptas, sunt architecto.
-            </p>
+                <details class="missao">
+                    <summary>Missão e Objetivos</summary>
+                    <p>
+                        <strong>Nossa Missão é Lorem ipsum dolor, sit
+                            amet consectetur adipisicing elit. Laudantium
+                            animi dolores consectetur ratione, earum adipisci
+                            enim eveniet exercitationem nesciunt facilis corrupti
+                            qui possimus non repudiandae quo nisi necessitatibus facere aliquam?</strong>
+                    </p>
+                </details>
+            </div>
 
-            <h3>Diferenciais</h3>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam sunt
-                eligendi perferendis! Vel ullam ipsum asperiores cupiditate dicta nulla
-                voluptatem qui explicabo.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem
-                numquam repellendus tempora suscipit sint. Voluptatem optio repellendus
-                natus culpa. Ipsa unde repellat, iste error hic doloribus at possimus
-                molestias similique!
-            </p>
-
+            <div class="col-md-6">
+                <img src="{{url_for('static', filename='universidade.png')}}" class="d-block mx-auto w-75 rounded-4" alt="Campus">
+            </div>
         </section>
 
-    </main>
-    {% endblock %}
+        <h3>Equipe</h3>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam sunt
+            eligendi perferendis! Vel ullam ipsum asperiores cupiditate dicta nulla
+            voluptatem qui explicabo.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio accusamus
+            veniam repudiandae minima ullam facilis nobis recusandae impedit cum optio
+            rerum, non voluptatem assumenda similique atque, laboriosam
+            voluptas, sunt architecto.
+        </p>
+
+        <h3>Diferenciais</h3>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam sunt
+            eligendi perferendis! Vel ullam ipsum asperiores cupiditate dicta nulla
+            voluptatem qui explicabo.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem
+            numquam repellendus tempora suscipit sint. Voluptatem optio repellendus
+            natus culpa. Ipsa unde repellat, iste error hic doloribus at possimus
+            molestias similique!
+        </p>
+
+    </section>
+
+</main>
+{% endblock %}
