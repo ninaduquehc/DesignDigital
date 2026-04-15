@@ -1,7 +1,11 @@
+/* =========================
+   VARIÁVEIS E RAIZ
+========================= */
 :root {
     --roxo: rgb(119, 86, 149);
     --lilas: rgb(186, 157, 214);
     --fundo: rgb(39, 6, 62);
+    --laranja: rgb(255, 158, 32);
 }
 
 /* =========================
@@ -11,33 +15,25 @@ body {
     background-color: rgb(87, 61, 113);
     color: white;
     font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
 }
 
 /* =========================
    TIPOGRAFIA
 ========================= */
-
-/* Títulos */
 h1, h2, h3, h4, h5, h6 {
-    color: rgb(255, 158, 32);
-    margin-bottom: 1rem;
-}
-
-section + section {
-    margin-top: 3rem;
+    color: var(--laranja);
+    margin-bottom: 1.5rem;
 }
 
 h2, h3 {
-    margin-bottom: 1rem;
     margin-top: 0;
 }
 
-/* Parágrafos */
 p {
     margin-bottom: 1.25rem;
 }
 
-/* Títulos específicos */
 .titulo-principal {
     margin: 0;
 }
@@ -49,15 +45,12 @@ p {
 }
 
 /* =========================
-   HEADER
+   HEADER E LINKS
 ========================= */
 .logo-img {
     width: 7.5rem;
 }
 
-/* =========================
-   LINKS
-========================= */
 .nav-link {
     color: white;
     transition: 0.3s;
@@ -76,7 +69,7 @@ p {
 }
 
 /* =========================
-   BOTÕES
+   COMPONENTES (Botões e Cards)
 ========================= */
 .botao-custom {
     background-color: var(--roxo);
@@ -89,19 +82,6 @@ p {
     border-color: chocolate;
 }
 
-/* =========================
-   CAROUSEL
-========================= */
-.carousel-item img {
-    height: 60vh;
-    width: 100%;
-    object-fit: cover;
-    border-radius: 1rem;
-}
-
-/* =========================
-   CARDS
-========================= */
 .card {
     background-color: transparent;
     border: none;
@@ -112,8 +92,15 @@ p {
 }
 
 /* =========================
-   CURSOS
+   CURSOS E CAROUSEL
 ========================= */
+.carousel-item img {
+    height: 60vh;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
 .curso-card {
     position: relative;
     overflow: hidden;
@@ -128,7 +115,6 @@ p {
     object-fit: cover;
 }
 
-/* Overlay */
 .overlay {
     position: absolute;
     inset: 0;
@@ -146,21 +132,17 @@ p {
     opacity: 1;
 }
 
-/* =========================
-   DETAILS (FAQ)
-========================= */
+/* =====================================
+   DETAILS (FAQ / QUEM SOMOS) - AJUSTADO
+===================================== */
 details {
     background: #2a0a3d;
     border-radius: 0.5rem;
-    padding: 0.75rem 1rem;
-}
-
-details + details {
-    margin-top: 0.75rem;
-}
-
-details p {
-    margin-top: 0.5rem;
+    padding: 0.85rem 1.2rem;
+    width: 100%;             /* Garante alinhamento total com o título */
+    box-sizing: border-box;  /* Evita que o padding "estoure" a largura */
+    display: block;
+    margin-bottom: 0.75rem;  /* Espaçamento entre as caixas */
 }
 
 details summary {
@@ -168,26 +150,54 @@ details summary {
     font-size: 1.1rem;
     font-weight: 600;
     cursor: pointer;
+    list-style: none;        /* Remove a seta padrão em alguns browsers */
 }
 
-/* =========================
-   EXTRAS
-========================= */
+/* Seta customizada (opcional, simula o play da imagem) */
+details summary::-webkit-details-marker {
+    display: none;
+}
 
-.historia,
-.missao {
+details summary::before {
+    content: "▶ ";
+    font-size: 0.8rem;
+    margin-right: 10px;
+    color: white;
+}
+
+details[open] summary::before {
+    content: "▼ ";
+}
+
+details p {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Estilo das bordas laterais */
+.historia, .missao {
     border-left: 0.3rem solid var(--lilas);
 }
 
-.reset-link {
-    text-decoration: none;
-    color: inherit;
-    display: block;
+/* =========================
+   LAYOUT E ESPAÇAMENTO
+========================= */
+section + section {
+    margin-top: 3rem;
 }
 
-/* =========================
-   TRUNCATE (corrigido)
-========================= */
+.container > section:first-child > h2,
+.container > h2:first-child {
+    margin-top: 0 !important;
+}
+
+/* Ajuste da imagem para alinhar pelo topo com o texto */
+.col-md-6 img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Truncar texto */
 .truncar {
     max-width: 25rem;
     white-space: nowrap;
@@ -199,35 +209,4 @@ details summary {
     .truncar {
         max-width: 15rem;
     }
-}
-
-.col-md-6 > * + * {
-    margin-bottom: 1.5rem;
-}
-
-main > section + section {
-    margin-top: 2rem;
-}
-
-/* Espaçamento padrão para títulos */
-h2, .titulo-principal {
-    margin-top: 2rem !important;
-    margin-bottom: 1.5rem !important;
-}
-
-h3 {
-    margin-top: 1.8rem !important;
-    margin-bottom: 1rem !important;
-}
-
-/* Espaçamento entre parágrafos */
-p {
-    margin-bottom: 1.2rem !important;
-}
-
-/* Ajuste específico para garantir que o primeiro título 
-   da página não tenha um buraco enorme no topo */
-.container > section:first-child > h2,
-.container > h2:first-child {
-    margin-top: 0 !important;
 }
