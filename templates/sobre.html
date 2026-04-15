@@ -4,11 +4,11 @@
 
 {% block content %}
 
-<main class="p-4 d-flex flex-column gap-3">
+<div class="container py-5">
 
-    <section class="d-flex flex-column gap-3">
+    <section class="d-flex flex-column mb-5">
         <h2>Quem Somos</h2>
-        <section class="row align-items-center">
+        <section class="row align-items-center mb-5">
             <div class="col-md-6">
                 <details class="historia" open>
                     <summary>História da Universidade</summary>
@@ -38,7 +38,8 @@
             </div>
 
             <div class="col-md-6">
-                <img src="{{url_for('static', filename='imagens/universidade.png')}}" class="d-block mx-auto w-75 rounded-4" alt="Campus">
+                <img src="{{url_for('static', filename='imagens/universidade.png')}}"
+                    class="d-block mx-auto w-75 rounded-4" alt="Campus">
             </div>
         </section>
 
@@ -66,5 +67,5 @@
 
     </section>
 
-</main>
+</div>
 {% endblock %}
